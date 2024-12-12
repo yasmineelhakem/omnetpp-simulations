@@ -1,0 +1,7 @@
+out/
+.settings/
+*.oppbuildspec
+*.cproject
+*.project
+*.nedfolders
+*.nedexclusions
