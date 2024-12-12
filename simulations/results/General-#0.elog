@@ -1,0 +1,165 @@
+SB ov 1537 ev 2 rid General-0-20241212-20:51:43-8836
+
+E # 0 t 0 m 1 ce -1 msg -1
+MC id 1 c omnetpp::cModule t _4nodesnet.simulations.MyNet n MyNet cm 1
+MDC id 1 d bgb=613,290
+MC id 2 c Node t _4nodesnet.Node pid 1 n node1
+GC m 2 g 0 n in o 0
+GC m 2 g 3 n out o 1
+MDC id 2 d p=386,227
+MC id 3 c Node t _4nodesnet.Node pid 1 n node2
+GC m 3 g 0 n in o 0
+GC m 3 g 3 n out o 1
+MDC id 3 d p=386,85
+MC id 4 c Node t _4nodesnet.Node pid 1 n node3
+GC m 4 g 0 n in o 0
+GC m 4 g 3 n out o 1
+MDC id 4 d p=151,85
+MC id 5 c Node t _4nodesnet.Node pid 1 n node4
+GC m 5 g 0 n in o 0
+GC m 5 g 3 n out o 1
+MDC id 5 d p=151,227
+CC sm 2 sg 3 dm 3 dg 0
+CDC sm 2 sg 3 d ""
+CC sm 3 sg 3 dm 4 dg 0
+CDC sm 3 sg 3 d ""
+CC sm 4 sg 3 dm 5 dg 0
+CDC sm 4 sg 3 d ""
+CC sm 5 sg 3 dm 2 dg 0
+CDC sm 5 sg 3 d ""
+CMB sm 1 tm 2 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n "Initial Message" pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n "Initial Message" m 2 pe 0
+SH sm 2 sg 3 pd 0.1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n "Initial Message" sm 2 sg 3 st 0 am 3 ag 0 at 0.1 pe 0
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n "Initial Message" m 2 pe -1 cid 0
+CME
+CMB sm 1 tm 3 m initialize(0)
+CM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n "Initial Message" pe -1
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n "Initial Message" m 3 pe 0
+SH sm 3 sg 3 pd 0.1
+ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n "Initial Message" sm 3 sg 3 st 0 am 4 ag 0 at 0.1 pe 0
+CL id 2 tid 1 eid 2 etid 1 c omnetpp::cMessage n "Initial Message" m 3 pe -1 cid 1
+CME
+CMB sm 1 tm 4 m initialize(0)
+CM id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n "Initial Message" pe -1
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n "Initial Message" m 4 pe 0
+SH sm 4 sg 3 pd 0.1
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n "Initial Message" sm 4 sg 3 st 0 am 5 ag 0 at 0.1 pe 0
+CL id 3 tid 2 eid 3 etid 2 c omnetpp::cMessage n "Initial Message" m 4 pe -1 cid 2
+CME
+CMB sm 1 tm 5 m initialize(0)
+CM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n "Initial Message" pe -1
+BS id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n "Initial Message" m 5 pe 0
+SH sm 5 sg 3 pd 0.1
+ES id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n "Initial Message" sm 5 sg 3 st 0 am 2 ag 0 at 0.1 pe 0
+CL id 4 tid 3 eid 4 etid 3 c omnetpp::cMessage n "Initial Message" m 5 pe -1 cid 3
+CME
+
+E # 1 t 0.1 m 3 ce 0 msg 0
+- INFO: Message received: Initial Message
+CM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n "REsponse Message" pe -1
+BS id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n "REsponse Message" m 3 pe 1 sd 37.440675115213
+SH sm 3 sg 3 pd 0.1
+ES id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n "REsponse Message" sm 3 sg 3 st 37.540675115213 am 4 ag 0 at 37.640675115213 pe 1
+CL id 5 tid 4 eid 5 etid 4 c omnetpp::cMessage n "REsponse Message" m 3 pe -1 cid 4
+DM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n "Initial Message" m 3 pe 1
+
+E # 2 t 0.1 m 4 ce 0 msg 1
+- INFO: Message received: Initial Message
+CM id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n "REsponse Message" pe -1
+BS id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n "REsponse Message" m 4 pe 2 sd 39.642230819445
+SH sm 4 sg 3 pd 0.1
+ES id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n "REsponse Message" sm 4 sg 3 st 39.742230819445 am 5 ag 0 at 39.842230819445 pe 2
+CL id 6 tid 5 eid 6 etid 5 c omnetpp::cMessage n "REsponse Message" m 4 pe -1 cid 5
+DM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n "Initial Message" m 4 pe 2
+
+E # 3 t 0.1 m 5 ce 0 msg 2
+- INFO: Message received: Initial Message
+CM id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n "REsponse Message" pe -1
+BS id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n "REsponse Message" m 5 pe 3 sd 45.75946824858
+SH sm 5 sg 3 pd 0.1
+ES id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n "REsponse Message" sm 5 sg 3 st 45.85946824858 am 2 ag 0 at 45.95946824858 pe 3
+CL id 7 tid 6 eid 7 etid 6 c omnetpp::cMessage n "REsponse Message" m 5 pe -1 cid 6
+DM id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n "Initial Message" m 5 pe 3
+
+E # 4 t 0.1 m 2 ce 0 msg 3
+- INFO: Message received: Initial Message
+CM id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n "REsponse Message" pe -1
+BS id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n "REsponse Message" m 2 pe 4 sd 52.213287204504
+SH sm 2 sg 3 pd 0.1
+ES id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n "REsponse Message" sm 2 sg 3 st 52.313287204504 am 3 ag 0 at 52.413287204504 pe 4
+CL id 8 tid 7 eid 8 etid 7 c omnetpp::cMessage n "REsponse Message" m 2 pe -1 cid 7
+DM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n "Initial Message" m 2 pe 4
+
+E # 5 t 37.640675115213 m 4 ce 1 msg 4
+- INFO: Message received: REsponse Message
+CM id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n "REsponse Message" pe -1
+BS id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n "REsponse Message" m 4 pe 5 sd 40.138168518897
+SH sm 4 sg 3 pd 0.1
+ES id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n "REsponse Message" sm 4 sg 3 st 77.77884363411 am 5 ag 0 at 77.87884363411 pe 5
+CL id 9 tid 8 eid 9 etid 8 c omnetpp::cMessage n "REsponse Message" m 4 pe -1 cid 8
+DM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n "REsponse Message" m 4 pe 5
+
+E # 6 t 39.842230819445 m 5 ce 2 msg 5
+- INFO: Message received: REsponse Message
+CM id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n "REsponse Message" pe -1
+BS id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n "REsponse Message" m 5 pe 6 sd 52.897280992474
+SH sm 5 sg 3 pd 0.1
+ES id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n "REsponse Message" sm 5 sg 3 st 92.739511811919 am 2 ag 0 at 92.839511811919 pe 6
+CL id 10 tid 9 eid 10 etid 9 c omnetpp::cMessage n "REsponse Message" m 5 pe -1 cid 9
+DM id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n "REsponse Message" m 5 pe 6
+
+E # 7 t 45.95946824858 m 2 ce 3 msg 6
+- INFO: Message received: REsponse Message
+CM id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n "REsponse Message" pe -1
+BS id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n "REsponse Message" m 2 pe 7 sd 37.244158869144
+SH sm 2 sg 3 pd 0.1
+ES id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n "REsponse Message" sm 2 sg 3 st 83.203627117724 am 3 ag 0 at 83.303627117724 pe 7
+CL id 11 tid 10 eid 11 etid 10 c omnetpp::cMessage n "REsponse Message" m 2 pe -1 cid 10
+DM id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n "REsponse Message" m 2 pe 7
+
+E # 8 t 52.413287204504 m 3 ce 4 msg 7
+- INFO: Message received: REsponse Message
+CM id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n "REsponse Message" pe -1
+BS id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n "REsponse Message" m 3 pe 8 sd 52.362586862873
+SH sm 3 sg 3 pd 0.1
+ES id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n "REsponse Message" sm 3 sg 3 st 104.775874067377 am 4 ag 0 at 104.875874067377 pe 8
+CL id 12 tid 11 eid 12 etid 11 c omnetpp::cMessage n "REsponse Message" m 3 pe -1 cid 11
+DM id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n "REsponse Message" m 3 pe 8
+
+E # 9 t 77.87884363411 m 5 ce 5 msg 8
+- INFO: Message received: REsponse Message
+CM id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n "REsponse Message" pe -1
+BS id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n "REsponse Message" m 5 pe 9 sd 31.182739839423
+SH sm 5 sg 3 pd 0.1
+ES id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n "REsponse Message" sm 5 sg 3 st 109.061583473533 am 2 ag 0 at 109.161583473533 pe 9
+CL id 13 tid 12 eid 13 etid 12 c omnetpp::cMessage n "REsponse Message" m 5 pe -1 cid 12
+DM id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n "REsponse Message" m 5 pe 9
+
+E # 10 t 83.303627117724 m 3 ce 7 msg 10
+- INFO: Message received: REsponse Message
+CM id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n "REsponse Message" pe -1
+BS id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n "REsponse Message" m 3 pe 10 sd 41.178184819873
+SH sm 3 sg 3 pd 0.1
+ES id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n "REsponse Message" sm 3 sg 3 st 124.481811937597 am 4 ag 0 at 124.581811937597 pe 10
+CL id 14 tid 13 eid 14 etid 13 c omnetpp::cMessage n "REsponse Message" m 3 pe -1 cid 13
+DM id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n "REsponse Message" m 3 pe 10
+
+E # 11 t 92.839511811919 m 2 ce 6 msg 9
+- INFO: Message received: REsponse Message
+CM id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n "REsponse Message" pe -1
+BS id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n "REsponse Message" m 2 pe 11 sd 42.294705754612
+SH sm 2 sg 3 pd 0.1
+ES id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n "REsponse Message" sm 2 sg 3 st 135.134217566531 am 3 ag 0 at 135.234217566531 pe 11
+CL id 15 tid 14 eid 15 etid 14 c omnetpp::cMessage n "REsponse Message" m 2 pe -1 cid 14
+DM id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n "REsponse Message" m 2 pe 11
+
+E # 12 t 104.875874067377 m 4 ce 8 msg 11
+- INFO: Message received: REsponse Message
+CM id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n "REsponse Message" pe -1
+BS id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n "REsponse Message" m 4 pe 12 sd 29.219085411169
+SH sm 4 sg 3 pd 0.1
+ES id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n "REsponse Message" sm 4 sg 3 st 134.094959478546 am 5 ag 0 at 134.194959478546 pe 12
+CL id 16 tid 15 eid 16 etid 15 c omnetpp::cMessage n "REsponse Message" m 4 pe -1 cid 15
+DM id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n "REsponse Message" m 4 pe 12
